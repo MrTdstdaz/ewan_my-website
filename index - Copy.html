@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة القفز الممتعة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>لعبة القفز الممتعة</h1>
+        <div id="game-board">
+            <div id="player"></div>
+            <!-- المنصات سيتم إضافتها هنا بواسطة JavaScript -->
+        </div>
+        <div class="score-board">
+            النقاط: <span id="score">0</span>
+        </div>
+        <button id="start-button">ابدأ اللعبة</button>
+        <div id="game-over-message" class="hidden">
+            <h2>انتهت اللعبة!</h2>
+            <p>نقاطك النهائية: <span id="final-score">0</span></p>
+            <button id="restart-button">إعادة اللعب</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

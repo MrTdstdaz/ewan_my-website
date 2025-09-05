@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2c3e50; /* خلفية داكنة */
+    font-family: 'Arial', sans-serif;
+    color: #ecf0f1;
+    text-align: center;
+    direction: rtl; /* لدعم اللغة العربية */
+}
+
+.game-container {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #e67e22; /* لون برتقالي للعنوان */
+    margin-bottom: 20px;
+}
+
+#game-board {
+    width: 300px;
+    height: 400px;
+    background-color: #7f8c8d; /* لون لوحة اللعبة */
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden; /* لإخفاء المنصات خارج الحدود */
+    border-radius: 8px;
+    border: 3px solid #bdc3c7;
+}
+
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: #2ecc71; /* لون اللاعب (أخضر) */
+    position: absolute;
+    bottom: 0; /* يبدأ من الأسفل */
+    left: calc(50% - 15px); /* في المنتصف */
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.platform {
+    width: 80px;
+    height: 10px;
+    background-color: #3498db; /* لون المنصات (أزرق) */
+    position: absolute;
+    left: 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.score-board {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #f1c40f; /* لون أصفر للنقاط */
+}
+
+button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+#game-over-message {
+    background-color: rgba(44, 62, 80, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    z-index: 20;
+}
+
+#game-over-message h2 {
+    color: #e74c3c; /* أحمر للعبة انتهت */
+    font-size: 2em;
+}
+
+#game-over-message p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
